@@ -1,0 +1,1337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="only light">
+<title>Kendall Calantropio | Industrial Design</title>
+<meta name="description" content="Kendall Calantropio is an industrial design student at Cal State Long Beach. 3D printed objects, sketches, photography, and video.">
+<script>document.documentElement.classList.add("js-intro");setTimeout(function(){document.documentElement.classList.remove("js-intro")},3500);</script>
+<link rel="preload" href="assets/fonts/sacramento.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%23C68D2B%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-family=%27Georgia,serif%27 font-size=%2726%27 text-anchor=%27middle%27 fill=%27%23FBF5EA%27%3EKC%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kendall Calantropio | Industrial Design">
+<meta property="og:description" content="Industrial design student at Cal State Long Beach. 3D printed objects, sketches, collages, photography, and video.">
+<meta property="og:url" content="https://calantropio.com/">
+<meta property="og:image" content="https://calantropio.com/assets/img/lunchbox-1.jpg">
+<style>
+/* ---------- Tokens: colored pencils on sketchbook paper (always light) ---------- */
+:root{
+  --paper:#F2E6D3;
+  --paper-deep:#E8D7BC;
+  --paper-card:#F7EEDF;
+  --frame:#FBF5EA;
+  --graphite:#3B352F;
+  --graphite-soft:#6B6158;
+  --ochre:#C68D2B;
+  --pink:#D7889A;
+  --sky:#7FA4C4;
+  --gold:#D9A03A;
+  --shadow:0 30px 60px -32px rgba(84,54,20,.42);
+  --ease:cubic-bezier(.2,.7,.1,1);
+  --gutter:clamp(1.1rem,4vw,2.6rem);
+  color-scheme:only light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%;background:var(--paper)}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto !important}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
+.lenis.lenis-stopped{overflow:hidden}
+html.lb-open{overflow:hidden}
+body{
+  margin:0;background:var(--paper);color:var(--graphite);
+  font-family:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  font-optical-sizing:auto;font-size:clamp(1rem,.95rem + .25vw,1.125rem);line-height:1.55;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit}
+[hidden]{display:none !important}
+:focus-visible{outline:2px solid var(--ochre);outline-offset:4px;border-radius:8px}
+.skip{position:absolute;left:1rem;top:-4rem;z-index:100;background:var(--graphite);color:var(--paper);padding:.6rem 1rem;border-radius:999px;text-decoration:none}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + .75rem)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.16;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .32  0 0 0 0 .25  0 0 0 0 .17  0 0 0 .6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+
+/* ---------- Nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+  padding:calc(env(safe-area-inset-top,0px) + .8rem) var(--gutter) .8rem;
+  transition:transform .55s var(--ease),background-color .4s ease,box-shadow .4s ease}
+.nav.is-scrolled{background:var(--paper);background:color-mix(in srgb,var(--paper) 84%,transparent);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 1px 0 color-mix(in srgb,var(--graphite) 10%,transparent)}
+.nav.is-hidden{transform:translateY(-110%)}
+.nav-mark{font-family:"Sacramento","Snell Roundhand",cursive;font-size:2.3rem;line-height:1;color:var(--ochre);text-decoration:none;padding:0 .2rem}
+.nav-links{display:flex;gap:clamp(1.1rem,3vw,2.4rem)}
+.nav-links a{position:relative;color:var(--graphite);text-decoration:none;font-size:1rem;padding:.35rem 0}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:var(--ochre);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.nav-links a:hover::after,.nav-links a:focus-visible::after{transform:scaleX(1);transform-origin:left}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;isolation:isolate;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:clamp(5.5rem,12vh,8rem) var(--gutter) clamp(2.5rem,7vh,4.5rem);overflow:hidden}
+.waves{display:block;width:100%;pointer-events:none}
+.waves-hero{position:absolute;left:0;right:0;bottom:0;height:64%;z-index:-1}
+.hero-name{margin:0;font-family:"Sacramento","Snell Roundhand",cursive;font-weight:400;
+  font-size:clamp(3.1rem,11.5vw,9.8rem);line-height:1.02;color:var(--ochre)}
+.hero-name-ink{display:inline-block;padding:.22em .35em .26em;margin:-.22em -.35em -.26em}
+.hero-role{margin:.35rem 0 0;color:var(--graphite-soft);font-size:clamp(1rem,.9rem + .4vw,1.2rem)}
+
+.feature{position:relative;margin-top:clamp(1.4rem,4vh,2.6rem);width:min(100%,980px);display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"prev stage next" "cap cap cap";
+  align-items:center;column-gap:clamp(.25rem,4vw,4rem);row-gap:clamp(1rem,2.4vh,1.6rem)}
+.feature-stage{grid-area:stage;position:relative;justify-self:center;width:clamp(260px,min(50vw,60svh),660px);aspect-ratio:1;
+  perspective:900px;touch-action:pan-y;cursor:pointer}
+.feature-frame{position:absolute;inset:7%;border-radius:50%;overflow:hidden;background:var(--paper-deep);
+  border:clamp(6px,.9vw,10px) solid var(--frame);box-shadow:var(--shadow);will-change:transform}
+.feature-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none}
+.feature-ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.feature-ring path{fill:none;stroke:var(--sky);stroke-width:.42;stroke-linecap:round;stroke-dasharray:1;opacity:.9}
+.feature-ring path:last-child{stroke:var(--ochre);opacity:.65}
+.feature-arrow{appearance:none;border:0;background:none;width:clamp(44px,6vw,66px);height:clamp(44px,6vw,66px);border-radius:50%;
+  display:grid;place-items:center;cursor:pointer;color:var(--graphite-soft);transition:color .3s ease}
+.feature-arrow:hover{color:var(--ochre)}
+.feature-arrow.prev{grid-area:prev}
+.feature-arrow.next{grid-area:next}
+.feature-arrow svg{width:70%;height:70%;overflow:visible}
+.feature-arrow.next svg{transform:scaleX(-1)}
+.feature-arrow path{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linejoin:round;stroke-linecap:round}
+.feature-caption{grid-area:cap;display:flex;flex-direction:column;align-items:center;gap:.25rem}
+.feature-title{margin:0;font-size:clamp(1.3rem,1rem + 1vw,1.8rem);font-weight:500;letter-spacing:-.015em}
+.feature-note{margin:0;color:var(--graphite-soft);font-size:.98rem}
+.feature-row{display:flex;align-items:center;gap:1.2rem;margin-top:.7rem}
+.feature-dots{display:flex}
+.feature-dot{appearance:none;border:0;background:none;width:24px;height:28px;padding:0;cursor:pointer;display:grid;place-items:center}
+.feature-dot::before{content:"";width:9px;height:9px;border-radius:50%;border:1.5px solid var(--graphite-soft);transition:background-color .3s ease,border-color .3s ease,transform .4s var(--ease)}
+.feature-dot[aria-current="true"]::before{background:var(--ochre);border-color:var(--ochre);transform:scale(1.2)}
+
+.pill{appearance:none;display:inline-flex;align-items:center;gap:.5rem;border:1.5px solid var(--graphite);background:transparent;color:var(--graphite);
+  border-radius:999px;padding:.55rem 1.15rem;font-size:.95rem;white-space:nowrap;cursor:pointer;text-decoration:none;transition:background-color .35s ease,color .35s ease,border-color .35s ease}
+.pill:hover{background:var(--graphite);color:var(--paper)}
+
+/* ---------- Four circles ---------- */
+.paths{padding:clamp(1.5rem,5vw,3.5rem) var(--gutter) clamp(.5rem,3vw,2rem)}
+.paths-list{list-style:none;margin:0 auto;padding:0;max-width:1240px;display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(1.6rem,3vw,2.6rem) clamp(.75rem,2.4vw,2.6rem)}
+.paths-list > li{flex:0 1 200px;min-width:0}
+.path{display:flex;flex-direction:column;align-items:center;gap:.8rem;color:var(--graphite);text-decoration:none;text-align:center;border-radius:24px}
+.path-ring{position:relative;width:min(100%,210px);aspect-ratio:1.28;display:grid;place-items:center}
+.path-ring .ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.ring path{fill:none;stroke:var(--pink);stroke-width:1.6;stroke-linecap:round;stroke-dasharray:1}
+.ring path:last-child{opacity:.6}
+.path-fill{position:absolute;inset:12% 10%;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--pink) 30%,transparent),transparent);
+  transform:scale(.55);opacity:0;transition:transform .7s var(--ease),opacity .45s ease}
+.path-icon{position:relative;width:32%;height:auto;overflow:visible;transition:transform .6s var(--ease)}
+.path-icon path{fill:none;stroke:var(--graphite);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.path:hover .path-fill,.path:focus-visible .path-fill{transform:scale(1);opacity:1}
+.path:hover .path-icon,.path:focus-visible .path-icon{transform:translateY(-4px) rotate(-5deg)}
+.path:hover .ring path,.path:focus-visible .ring path{animation:redraw 1.1s var(--ease) both}
+.path:hover .ring path:last-child,.path:focus-visible .ring path:last-child{animation-delay:.12s}
+@keyframes redraw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.path-label{font-size:clamp(1.05rem,.95rem + .45vw,1.35rem);font-weight:500;letter-spacing:-.01em}
+.path-where{margin-top:-.55rem;font-size:.86rem;color:var(--graphite-soft)}
+/* when someone taps Work in the menu, the circles redraw and nudge to say "start here" */
+.paths-list.is-focus .ring path{animation:redraw 1.3s var(--ease) both}
+.paths-list.is-focus .ring path:last-child{animation-delay:.15s}
+.paths-list.is-focus .path-ring{animation:nudge 1s var(--ease) both}
+.paths-list.is-focus li:nth-child(2) .path-ring{animation-delay:.07s}
+.paths-list.is-focus li:nth-child(3) .path-ring{animation-delay:.14s}
+.paths-list.is-focus li:nth-child(4) .path-ring{animation-delay:.21s}
+.paths-list.is-focus li:nth-child(5) .path-ring{animation-delay:.28s}
+@keyframes nudge{0%{transform:scale(.9)}55%{transform:scale(1.06)}100%{transform:none}}
+
+.divider{height:clamp(90px,14vw,170px)}
+.divider .waves{height:100%}
+
+/* ---------- About ---------- */
+.about{padding:clamp(2rem,6vw,4.5rem) var(--gutter) clamp(3rem,8vw,6rem)}
+.about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(2rem,6vw,6rem);align-items:center}
+.about-hello{margin:0 0 1.1rem;font-family:"Sacramento","Snell Roundhand",cursive;font-weight:400;color:var(--ochre);font-size:clamp(3.2rem,2rem + 4.4vw,6rem);line-height:1}
+.about-facts{list-style:none;margin:0 0 1.6rem;padding:0;display:grid;gap:.2rem;font-size:clamp(1.2rem,1rem + .7vw,1.6rem);font-weight:500;letter-spacing:-.015em;line-height:1.3}
+.about-bio{margin:0;max-width:46ch;color:var(--graphite-soft)}
+.portrait{position:relative;justify-self:center;width:min(100%,380px);aspect-ratio:3/4}
+.portrait-frame{position:absolute;inset:5%;border-radius:50%;overflow:hidden;border:clamp(7px,.9vw,10px) solid var(--frame);box-shadow:var(--shadow);background:var(--paper-deep)}
+.portrait-frame img{width:100%;height:100%;object-fit:cover;object-position:50% 28%;transform:scale(1.12)}
+.portrait svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.portrait svg path{fill:none;stroke:var(--sky);stroke-width:.45;stroke-linecap:round}
+.portrait svg path:last-child{stroke:var(--ochre);opacity:.55}
+
+/* ---------- Work pages: shared header ---------- */
+.page-head{position:relative;isolation:isolate;max-width:1300px;margin:0 auto;padding:clamp(7rem,17vh,10.5rem) var(--gutter) clamp(1.5rem,3.5vw,2.5rem)}
+.page-waves{position:absolute;left:50%;width:100vw;transform:translateX(-50%);bottom:-30px;height:70%;z-index:-1}
+.back-link{display:inline-block;margin-bottom:1.6rem;color:var(--graphite-soft);text-decoration:none;border-bottom:1.5px solid var(--pink);padding-bottom:.1rem;transition:color .3s ease}
+.back-link:hover{color:var(--ochre)}
+.page-title{margin:0;font-size:clamp(3.4rem,2rem + 7vw,9.5rem);font-weight:500;letter-spacing:-.045em;line-height:.92}
+.page-intro{margin:1.3rem 0 0;max-width:44ch;color:var(--graphite-soft);font-size:clamp(1.05rem,.95rem + .4vw,1.3rem)}
+.page-index{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.9rem}
+.chip{appearance:none;border:1.5px solid color-mix(in srgb,var(--graphite) 28%,transparent);background:var(--paper);border-radius:999px;padding:.45rem .95rem;font-size:.93rem;cursor:pointer;transition:border-color .3s ease,color .3s ease}
+.chip:hover{border-color:var(--ochre);color:var(--ochre)}
+
+/* ---------- 3D models: a showroom of plinths ---------- */
+.exhibits{max-width:1300px;margin:0 auto;padding:0 var(--gutter)}
+.exhibit{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(2rem,5vw,5.5rem);
+  padding-block:clamp(1.75rem,3.5vw,3rem)}
+.exhibit:nth-child(even) .exhibit-stage{order:2}
+.exhibit-stage{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center}
+.plinth-glow{position:absolute;inset:4% -6%;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--accent) 32%,transparent),transparent 74%);z-index:-2}
+.exhibit-art{--pad:clamp(10px,1.4vw,16px);--fh:min(60svh,560px);position:relative;width:min(86%,calc(var(--fh) * var(--ar,1) + 2 * var(--pad)))}
+.exhibit-sketch{position:absolute;inset:-13px;border:1.6px solid var(--accent);border-radius:18px;transform:rotate(-1.4deg);opacity:.9;pointer-events:none;transition:transform .8s var(--ease)}
+.exhibit-sketch + .exhibit-sketch{inset:-7px;border-color:var(--ochre);border-radius:14px;opacity:.55;transform:rotate(1deg)}
+.exhibit-back{position:absolute;inset:0;padding:var(--pad);border-radius:10px;background:var(--frame);transform:rotate(4.5deg) translate(4%,1%);transform-origin:50% 90%;
+  box-shadow:0 0 0 1px rgba(59,53,47,.07),0 20px 40px -24px rgba(84,54,20,.4);transition:transform .8s var(--ease)}
+.exhibit:nth-child(even) .exhibit-back{transform:rotate(-4.5deg) translate(-4%,1%)}
+.exhibit-back img{width:100%;height:100%;object-fit:cover;border-radius:3px}
+.exhibit-frame{position:relative;display:block;width:100%;padding:var(--pad);border:0;border-radius:10px;background:var(--frame);cursor:pointer;text-align:left;
+  box-shadow:0 0 0 1px rgba(59,53,47,.07),0 2px 4px rgba(84,54,20,.06),0 26px 50px -26px rgba(84,54,20,.4),0 60px 100px -60px rgba(84,54,20,.35);
+  transition:box-shadow .6s var(--ease),transform .6s var(--ease)}
+.exhibit-frame::after{content:"";position:absolute;inset:var(--pad);border-radius:3px;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(59,53,47,.14),inset 0 1px 8px rgba(40,25,10,.1)}
+.exhibit-photo{display:block;width:100%;aspect-ratio:var(--ar,1);overflow:hidden;border-radius:3px;background:var(--paper-deep)}
+.exhibit-photo img{width:100%;height:100%;object-fit:cover;transition:filter .6s ease}
+.exhibit-art:hover .exhibit-frame,.exhibit-frame:focus-visible{transform:translateY(-6px);
+  box-shadow:0 0 0 1px rgba(59,53,47,.09),0 3px 6px rgba(84,54,20,.08),0 40px 70px -28px rgba(84,54,20,.5),0 70px 120px -60px rgba(84,54,20,.4)}
+.exhibit-art:hover .exhibit-photo img{filter:brightness(1.04) saturate(1.08)}
+.exhibit-art:hover .exhibit-sketch{transform:rotate(.8deg) scale(1.012)}
+.exhibit-art:hover .exhibit-sketch + .exhibit-sketch{transform:rotate(-1deg) scale(1.02)}
+.exhibit-art:hover .exhibit-back{transform:rotate(7deg) translate(6%,2%)}
+.exhibit:nth-child(even) .exhibit-art:hover .exhibit-back{transform:rotate(-7deg) translate(-6%,2%)}
+.exhibit-text h2{margin:0 0 1.1rem;font-size:clamp(2.4rem,1.4rem + 3.6vw,4.6rem);font-weight:500;letter-spacing:-.035em;line-height:.98}
+.exhibit-desc{margin:0 0 1.8rem;max-width:44ch}
+
+/* ---------- Sketches: pages torn from a sketchbook, spread on a desk ---------- */
+.desk{max-width:1300px;margin:0 auto;padding:clamp(1rem,3vw,2rem) var(--gutter) clamp(2rem,6vw,4rem);display:flex;gap:clamp(1.4rem,3vw,2.8rem);align-items:flex-start}
+.desk-col{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:clamp(2.2rem,4vw,3.6rem)}
+.desk-col:nth-child(2){padding-top:clamp(2rem,8vw,6.5rem)}
+.desk-col:nth-child(3){padding-top:clamp(1rem,3vw,2.5rem)}
+.sheet{appearance:none;display:block;width:100%;border:0;background:none;padding:0;text-align:left;cursor:pointer;border-radius:10px}
+.sheet-body{position:relative;display:block}
+.sheet-under{position:absolute;inset:0;background:#F1E9DB;border-radius:6px 6px 10px 10px;transform:rotate(calc(var(--tilt,0deg) + 3.2deg)) translate(7px,7px);
+  box-shadow:0 18px 30px -22px rgba(70,45,15,.4)}
+.sheet-paper{position:relative;display:block;background:var(--frame);padding:34px 14px 14px;border-radius:6px 6px 10px 10px;transform:rotate(var(--tilt,0deg));
+  box-shadow:0 22px 34px -22px rgba(70,45,15,.42),0 2px 6px -2px rgba(70,45,15,.12);transition:transform .7s var(--ease),box-shadow .7s var(--ease)}
+.sheet-coil{position:absolute;top:5px;left:12px;right:12px;height:22px;background-repeat:repeat-x;background-size:16px 22px;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='22'><circle cx='8' cy='15' r='2.6' fill='%23CDBFA8'/><path d='M8 15 C4 15 4 2.5 8 2.5 C11.5 2.5 11.5 9 9.6 11.6' fill='none' stroke='%233B352F' stroke-width='1.6' stroke-linecap='round'/></svg>")}
+.sheet-paper img{width:100%;height:auto;border-radius:2px}
+.sheet:hover .sheet-paper,.sheet:focus-visible .sheet-paper{transform:rotate(0deg) translateY(-8px);box-shadow:0 36px 52px -26px rgba(70,45,15,.5),0 2px 6px -2px rgba(70,45,15,.12)}
+.sheet-title{display:block;margin-top:1.1rem;font-size:1.25rem;font-weight:500;letter-spacing:-.01em}
+.sheet-meta{display:block;color:var(--graphite-soft);font-size:.95rem}
+
+
+/* ---------- Collages: a bare-bones story player ---------- */
+.page-head-tight{padding-top:clamp(5.5rem,11vh,7rem);padding-bottom:clamp(1rem,2.4vw,1.6rem)}
+.page-head-tight .back-link{margin-bottom:.7rem}
+.page-head-tight .page-title{font-size:clamp(2.4rem,1.6rem + 3vw,4rem)}
+.stories{display:flex;align-items:center;justify-content:center;gap:clamp(.6rem,2vw,1.6rem);padding:0 var(--gutter) clamp(3rem,8vw,5rem)}
+.story{--ar:0.5725;--sh:clamp(420px,calc(100svh - 15.5rem),880px);position:relative;flex:0 0 auto;width:min(calc(100vw - 2 * var(--gutter)),calc(var(--sh) * var(--ar)));aspect-ratio:var(--ar);
+  border-radius:18px;overflow:hidden;background:#141110;box-shadow:0 40px 80px -40px rgba(40,25,10,.6);
+  cursor:pointer;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;touch-action:pan-y;-webkit-tap-highlight-color:transparent}
+.story::before{content:"";position:absolute;inset:0 0 auto;height:80px;z-index:1;pointer-events:none;background:linear-gradient(rgba(0,0,0,.32),transparent)}
+.story-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.story-bars{position:absolute;z-index:2;top:10px;left:10px;right:10px;display:flex;gap:3px;transition:opacity .2s ease}
+.story-bar{flex:1;height:2.5px;border-radius:2px;background:rgba(255,255,255,.38);overflow:hidden}
+.story-bar i{display:block;height:100%;background:#fff;transform:scaleX(0);transform-origin:left center}
+.story-head{position:absolute;z-index:2;top:20px;left:12px;right:6px;display:flex;align-items:center;gap:.55rem;color:#fff;font-size:.88rem;font-weight:500;
+  text-shadow:0 1px 3px rgba(0,0,0,.35);transition:opacity .2s ease}
+.story-pause{margin-left:auto;width:40px;height:40px;padding:0;border:0;border-radius:50%;background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer}
+.story-pause svg{width:16px;height:16px;overflow:visible}
+.story-pause path{fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.story-pause .i-play path{fill:currentColor}
+.story-pause .i-play,.story-pause.is-paused .i-pause{display:none}
+.story-pause.is-paused .i-play{display:block}
+.story.is-held .story-bars,.story.is-held .story-head{opacity:0}
+.story-side{flex:0 0 auto;width:44px;height:44px;padding:0;border:0;border-radius:50%;background:var(--frame);color:var(--graphite);cursor:pointer;display:grid;place-items:center;
+  box-shadow:0 0 0 1px rgba(59,53,47,.08),0 10px 20px -12px rgba(80,50,20,.5);transition:transform .4s var(--ease)}
+.story-side:hover{transform:scale(1.08)}
+.story-side svg{width:18px;height:18px}
+.story-side path{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:700px){.story-side{display:none}.story{border-radius:14px}}
+
+/* ---------- Next page ---------- */
+.next-page{display:flex;flex-direction:column;align-items:center;gap:.1rem;text-decoration:none;color:var(--graphite);text-align:center;
+  padding:clamp(3rem,8vw,6rem) var(--gutter) clamp(1.5rem,4vw,2.5rem)}
+.next-label{color:var(--graphite-soft);font-size:1.05rem;margin-bottom:.3rem}
+.next-title{position:relative;font-weight:600;color:var(--graphite);font-size:clamp(3rem,1.6rem + 6vw,7.2rem);letter-spacing:-.045em;line-height:.95;padding-bottom:.2em;transition:color .5s ease}
+.next-title::after{content:"";position:absolute;left:0;right:0;bottom:0;height:.17em;transform:scaleX(.3);transform-origin:left center;transition:transform .9s var(--ease);
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='14' viewBox='0 0 48 14'><path d='M0 7 Q12 0 24 7 T48 7' fill='none' stroke='%23C68D2B' stroke-width='2.4' stroke-linecap='round'/></svg>") repeat-x left center/auto 100%}
+.next-page:hover .next-title,.next-page:focus-visible .next-title{color:var(--ochre)}
+.next-page:hover .next-title::after,.next-page:focus-visible .next-title::after{transform:scaleX(1)}
+
+/* ---------- Footer with contact ---------- */
+.site-footer{padding:clamp(3rem,8vw,5.5rem) var(--gutter) 0;text-align:center;border-top:1px solid color-mix(in srgb,var(--graphite) 10%,transparent)}
+.contact-email{font-size:clamp(1.05rem,.95rem + .5vw,1.25rem);font-weight:600;padding:.95rem 2rem;background:var(--gold);border-color:var(--gold);color:var(--graphite)}
+.contact-email:hover{background:var(--graphite);border-color:var(--graphite);color:#FFF8EE}
+.contact-links{display:flex;justify-content:center;gap:1.6rem;margin-top:1.3rem}
+.contact-links a{color:var(--graphite);text-decoration:none;border-bottom:1.5px solid var(--pink);padding-bottom:.1rem}
+.contact-links a:hover{color:var(--ochre)}
+.footer-base{max-width:1200px;margin:clamp(2.5rem,6vw,4rem) auto 0;padding:1.3rem 0 1.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem;
+  color:var(--graphite-soft);font-size:.9rem;border-top:1px solid color-mix(in srgb,var(--graphite) 10%,transparent)}
+
+/* ---------- Page transition ---------- */
+.wipe{position:fixed;inset:0;z-index:70;background:var(--paper);visibility:hidden;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.wipe-lines{position:absolute;left:0;top:50%;width:100%;height:clamp(140px,24vw,240px);transform:translateY(-50%);overflow:visible}
+.wipe-lines path{fill:none;stroke:var(--ochre);stroke-width:1.5;stroke-linecap:round;stroke-dasharray:1;opacity:.75}
+.wipe-lines path:last-child{stroke:var(--sky)}
+.wipe-title{position:relative;font-weight:600;color:var(--graphite);font-size:clamp(3.2rem,1.8rem + 6.5vw,8rem);letter-spacing:-.045em;line-height:1;
+  padding:.06em .3em .14em;border-radius:40px;background:var(--paper);box-shadow:0 0 44px 26px var(--paper)}
+
+/* ---------- Lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:max(1rem,env(safe-area-inset-top,0px)) 1rem max(1rem,env(safe-area-inset-bottom,0px))}
+.lb-backdrop{position:absolute;inset:0;background:var(--paper);background:color-mix(in srgb,var(--paper) 72%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);opacity:0;transition:opacity .45s ease}
+.lb.is-open .lb-backdrop{opacity:1}
+.lb-panel{position:relative;width:min(1100px,100%);max-height:100%;overflow:auto;background:var(--paper-card);border-radius:32px;
+  box-shadow:0 40px 100px -30px rgba(40,25,10,.5);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:clamp(1rem,3vw,2.4rem);
+  padding:clamp(.8rem,2vw,1.4rem);opacity:0;transform:translateY(28px) scale(.97);transition:opacity .45s ease,transform .65s var(--ease)}
+.lb.is-open .lb-panel{opacity:1;transform:none}
+.lb{--lb-max-h:min(76svh,780px)}
+.lb-media{--ar:1.3333;position:relative;width:min(100%,calc(var(--lb-max-h) * var(--ar)));aspect-ratio:var(--ar);margin:0 auto;border-radius:22px;overflow:hidden;background:var(--paper-deep);transition:width .45s var(--ease)}
+.lb-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity .3s ease}
+.lb-nav{position:absolute;top:50%;width:44px;height:44px;margin-top:-22px;border-radius:50%;border:0;background:var(--paper-card);color:var(--graphite);cursor:pointer;display:grid;place-items:center;box-shadow:0 6px 18px -8px rgba(0,0,0,.35)}
+.lb-nav svg{width:18px;height:18px}
+.lb-nav path{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lb-prev{left:.75rem}.lb-next{right:.75rem}
+.lb-thumbs{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-top:.8rem}
+.lb-thumbs:empty{display:none}
+.lb-thumb{width:66px;height:54px;padding:0;border:2px solid transparent;border-radius:12px;overflow:hidden;background:none;cursor:pointer;opacity:.6;transition:opacity .3s ease,border-color .3s ease}
+.lb-thumb[aria-current="true"]{border-color:var(--ochre);opacity:1}
+.lb-thumb img{width:100%;height:100%;object-fit:cover}
+.lb-text{align-self:center;padding:.5rem .5rem 1rem}
+.lb-meta{margin:0 0 .5rem;color:var(--ochre)}
+.lb-text h3{margin:0 0 1rem;font-size:clamp(1.9rem,1.2rem + 2vw,2.9rem);font-weight:500;letter-spacing:-.025em;line-height:1.02}
+.lb-desc{margin:0;max-width:42ch}
+.lb-close{position:absolute;top:.9rem;right:.9rem;z-index:2;width:44px;height:44px;border-radius:50%;border:0;background:var(--paper-card);color:var(--graphite);cursor:pointer;display:grid;place-items:center;box-shadow:0 6px 18px -8px rgba(0,0,0,.35)}
+.lb-close svg{width:18px;height:18px}
+.lb-close path{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+
+/* ---------- Intro states ---------- */
+.js-intro .hero-name-ink{clip-path:inset(0 100% 0 0)}
+.js-intro .hero-role,.js-intro .feature,.js-intro .nav,.js-intro .waves-hero{opacity:0}
+
+/* ---------- Responsive ---------- */
+@media (max-width:860px){
+  .exhibit{grid-template-columns:1fr;min-height:0;gap:1.8rem}
+  .exhibit:nth-child(even) .exhibit-stage{order:0}
+  .exhibit-art{--fh:min(58svh,520px)}
+  .about-inner{grid-template-columns:1fr}
+  .portrait{order:-1;width:min(76%,320px)}
+  .lb-panel{grid-template-columns:1fr;border-radius:24px}
+  .lb{--lb-max-h:58svh}
+}
+@media (max-width:640px){
+  .paths-list > li{flex-basis:calc(50% - 1rem)}
+  .feature{grid-template-areas:"stage stage stage" "prev cap next"}
+  .feature-stage{width:min(86vw,420px)}
+  .feature-row{flex-direction:column;gap:.6rem}
+  .nav-links{gap:1rem}
+  .nav-links a{font-size:.95rem}
+}
+@media (prefers-reduced-motion: reduce){
+  .js-intro .hero-name-ink{clip-path:none}
+  .js-intro .hero-role,.js-intro .feature,.js-intro .nav,.js-intro .waves-hero{opacity:1}
+  *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#work">Skip to work</a>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="nav-mark" href="#top" aria-label="Kendall Calantropio, home">KC</a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- ================= Home ================= -->
+  <div class="view" data-view="home">
+    <section class="hero" aria-labelledby="heroName">
+      <canvas class="waves waves-hero" id="wavesHero" aria-hidden="true"></canvas>
+      <h1 class="hero-name" id="heroName"><span class="hero-name-ink">Kendall Calantropio</span></h1>
+      <p class="hero-role">Industrial design student at Cal State Long Beach</p>
+
+      <div class="feature" id="feature" aria-roledescription="carousel" aria-label="Featured projects">
+        <button class="feature-arrow prev" type="button" aria-label="Previous project">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M30 8 L9 20 L30 32 Z"/><path d="M27.5 12.5 L13.5 20.2 L28 27.6"/></svg>
+        </button>
+        <div class="feature-stage" id="featureStage">
+          <svg class="feature-ring" viewBox="0 0 100 100" aria-hidden="true">
+            <path pathLength="1" d="M52 3.5 C78 4.5 97 25 96.5 51 C96 77 75 97 49 96.5 C23 96 3.5 75 4 49 C4.5 24 26 3 52 3.5"/>
+            <path pathLength="1" d="M45 6 C72 2.5 95 21 97.5 47 C99 74 80 95.5 54 97.5 C27 99 5 81 3 55 C1.5 29 20 8.5 46 5.8 C52 5.2 57 5.6 61 6.8"/>
+          </svg>
+          <div class="feature-frame" id="featureFrame"></div>
+        </div>
+        <button class="feature-arrow next" type="button" aria-label="Next project">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M30 8 L9 20 L30 32 Z"/><path d="M27.5 12.5 L13.5 20.2 L28 27.6"/></svg>
+        </button>
+        <div class="feature-caption">
+          <div aria-live="polite">
+            <p class="feature-title" id="featureTitle"></p>
+          </div>
+          <div class="feature-row">
+            <div class="feature-dots" id="featureDots"></div>
+            <button class="pill" type="button" id="featureOpen">See project</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="paths" id="work-sec" aria-label="Browse Kendall’s work">
+      <ul class="paths-list">
+        <li>
+          <a class="path" href="#sketches">
+            <span class="path-ring">
+              <svg class="ring" viewBox="0 0 200 156" aria-hidden="true"><path pathLength="1" d="M12 80 C10 41 52 15 104 15 C156 15 190 43 188 79 C186 117 148 143 98 142 C48 141 14 118 12 80 Z"/><path pathLength="1" d="M21 70 C27 35 70 12 116 17 C164 21 194 51 186 89 C178 125 132 147 86 141 C40 135 14 107 21 70 C24 58 30 50 38 43"/></svg>
+              <span class="path-fill"></span>
+              <svg class="path-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 50 L40 24 L46 30 L20 56 L11 59 Z"/><path d="M40 24 L45 19 Q47.5 17 50 19.5 L50.5 20 Q53 22.5 51 25 L46 30"/><path d="M15.5 51.5 L19 55"/></svg>
+            </span>
+            <span class="path-label">Sketches</span>
+            <span class="path-where">Hand drawn and rendered pieces</span>
+          </a>
+        </li>
+        <li>
+          <a class="path" href="#models">
+            <span class="path-ring">
+              <svg class="ring" viewBox="0 0 200 156" aria-hidden="true"><path pathLength="1" d="M12 80 C10 41 52 15 104 15 C156 15 190 43 188 79 C186 117 148 143 98 142 C48 141 14 118 12 80 Z"/><path pathLength="1" d="M21 70 C27 35 70 12 116 17 C164 21 194 51 186 89 C178 125 132 147 86 141 C40 135 14 107 21 70 C24 58 30 50 38 43"/></svg>
+              <span class="path-fill"></span>
+              <svg class="path-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 9 L51 32 L32 55 L13 32 Z"/><path d="M32 9 L27 33 L32 55"/><path d="M13 32 L27 33 L51 32"/></svg>
+            </span>
+            <span class="path-label">3D models</span>
+            <span class="path-where">Created through CAD software</span>
+          </a>
+        </li>
+        <li>
+          <a class="path" href="#collages">
+            <span class="path-ring">
+              <svg class="ring" viewBox="0 0 200 156" aria-hidden="true"><path pathLength="1" d="M12 80 C10 41 52 15 104 15 C156 15 190 43 188 79 C186 117 148 143 98 142 C48 141 14 118 12 80 Z"/><path pathLength="1" d="M21 70 C27 35 70 12 116 17 C164 21 194 51 186 89 C178 125 132 147 86 141 C40 135 14 107 21 70 C24 58 30 50 38 43"/></svg>
+              <span class="path-fill"></span>
+              <svg class="path-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M23 8 H41 Q46 8 46 13 V51 Q46 56 41 56 H23 Q18 56 18 51 V13 Q18 8 23 8 Z"/><path d="M22.5 14 H27.5 M30 14 H35 M37.5 14 H41.5"/><path d="M22 46 L29 37 L34 42 L37 39 L42 45"/><path d="M36 27 a3.2 3.2 0 1 0 0.1 0"/></svg>
+            </span>
+            <span class="path-label">Collages</span>
+            <span class="path-where">Image medleys pulled from my stories</span>
+          </a>
+        </li>
+        <li>
+          <a class="path" href="https://www.pinterest.com/keny37/my-pins/" target="_blank" rel="noopener">
+            <span class="path-ring">
+              <svg class="ring" viewBox="0 0 200 156" aria-hidden="true"><path pathLength="1" d="M12 80 C10 41 52 15 104 15 C156 15 190 43 188 79 C186 117 148 143 98 142 C48 141 14 118 12 80 Z"/><path pathLength="1" d="M21 70 C27 35 70 12 116 17 C164 21 194 51 186 89 C178 125 132 147 86 141 C40 135 14 107 21 70 C24 58 30 50 38 43"/></svg>
+              <span class="path-fill"></span>
+              <svg class="path-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M25 55 C26 42 27 28 31 13"/><path d="M31 13 C43 8 51 15 48 24.5 C45 33 35 35 27.5 31"/><path d="M25 55 C21 55.5 18.5 52 21.5 49.5"/></svg>
+            </span>
+            <span class="path-label">Photography</span>
+            <span class="path-where">Color coded board of all my pictures<span class="sr"> (opens Pinterest in a new tab)</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="path" href="https://www.youtube.com/@calantropio" target="_blank" rel="noopener">
+            <span class="path-ring">
+              <svg class="ring" viewBox="0 0 200 156" aria-hidden="true"><path pathLength="1" d="M12 80 C10 41 52 15 104 15 C156 15 190 43 188 79 C186 117 148 143 98 142 C48 141 14 118 12 80 Z"/><path pathLength="1" d="M21 70 C27 35 70 12 116 17 C164 21 194 51 186 89 C178 125 132 147 86 141 C40 135 14 107 21 70 C24 58 30 50 38 43"/></svg>
+              <span class="path-fill"></span>
+              <svg class="path-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M22 15 L50 32 L22 49 Z"/><path d="M25.5 21 L44 32.2 L26 43.5"/></svg>
+            </span>
+            <span class="path-label">Videography</span>
+            <span class="path-where">Collection of mini day-to-day films<span class="sr"> (opens YouTube in a new tab)</span></span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <div class="divider" aria-hidden="true"><canvas class="waves" id="wavesA"></canvas></div>
+
+    <section class="about" id="about-sec" aria-labelledby="aboutHead">
+      <div class="about-inner">
+        <div>
+          <h2 class="about-hello" id="aboutHead">Hi, I’m Kendall</h2>
+          <ul class="about-facts">
+            <li>Industrial design student</li>
+            <li>Minor in marketing</li>
+            <li>California State University, Long Beach</li>
+          </ul>
+          <p class="about-bio">I design all my pieces with a very stylized and playful attitude, thinking of the overall feeling a product, image, or video will give rather than just being functional. I am inspired by everyday moments and love bringing those ideas to life.</p>
+        </div>
+        <div class="portrait">
+          <div class="portrait-frame"><img id="portraitImg" src="assets/img/kendall-portrait.jpg" alt="Kendall smiling and holding up a painted scroll" loading="lazy" decoding="async"></div>
+          <svg viewBox="0 0 100 133" aria-hidden="true">
+            <path d="M50 6 C78 6 95 34 95 67 C95 101 76 127 50 127 C24 127 5 101 5 67 C5 34 22 6 50 6"/>
+            <path d="M47 9 C76 4 97 30 96 65 C95 100 79 129 52 129 C25 130 4 104 3 70 C2 37 19 11 50 7.5"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= 3D models page ================= -->
+  <div class="view" data-view="models">
+    <header class="page-head">
+      <canvas class="waves page-waves" id="wavesModels" aria-hidden="true"></canvas>
+      <a class="back-link" href="#work">Back to all work</a>
+      <h1 class="page-title">3D models</h1>
+      <div class="page-index" id="modelChips" aria-label="Jump to an object"></div>
+    </header>
+    <div class="exhibits" id="exhibits"></div>
+    <a class="next-page" href="#sketches"><span class="next-label">Next page</span><span class="next-title">Sketches</span></a>
+  </div>
+
+  <!-- ================= Sketches page ================= -->
+  <div class="view" data-view="sketches">
+    <header class="page-head">
+      <canvas class="waves page-waves" id="wavesSketches" aria-hidden="true"></canvas>
+      <a class="back-link" href="#work">Back to all work</a>
+      <h1 class="page-title">Sketches</h1>
+    </header>
+    <div class="desk" id="desk"></div>
+    <a class="next-page" href="#models"><span class="next-label">Next page</span><span class="next-title">3D models</span></a>
+  </div>
+  <!-- ================= Collages page ================= -->
+  <div class="view" data-view="collages">
+    <header class="page-head page-head-tight">
+      <canvas class="waves page-waves" id="wavesCollages" aria-hidden="true"></canvas>
+      <a class="back-link" href="#work">Back to all work</a>
+      <h1 class="page-title">Collages</h1>
+    </header>
+    <div class="stories">
+      <button class="story-side" id="storyPrev" type="button" aria-label="Previous collage"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4 L6.5 10 L12.5 16"/></svg></button>
+      <div class="story" id="story" role="region" aria-roledescription="slideshow" aria-label="Collages">
+        <div class="story-bars" id="storyBars" aria-hidden="true"></div>
+        <div class="story-head">
+          <button class="story-pause" id="storyPause" type="button" aria-label="Pause">
+            <svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M7 4 V16 M13 4 V16"/></svg>
+            <svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M6.5 4 L15.5 10 L6.5 16 Z"/></svg>
+          </button>
+        </div>
+        <img class="story-img" id="storyImg" alt="" draggable="false">
+        <p class="sr" id="storyLive" aria-live="polite"></p>
+      </div>
+      <button class="story-side" id="storyNext" type="button" aria-label="Next collage"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4 L13.5 10 L7.5 16"/></svg></button>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" id="contact-sec" aria-label="Contact">
+  <a class="pill contact-email" href="mailto:Kendall@Calantropio.com" aria-label="Contact now: email Kendall@Calantropio.com">Contact now</a>
+  <div class="footer-base">
+    <span id="clock">Long Beach, CA</span>
+    <span>© <span id="year">2026</span> Kendall Calantropio</span>
+  </div>
+</footer>
+
+<div class="wipe" id="wipe" aria-hidden="true">
+  <svg class="wipe-lines" viewBox="0 0 1200 200" preserveAspectRatio="none">
+    <path pathLength="1" d="M-20 118 C200 40 380 170 600 100 S1000 30 1220 108"/>
+    <path pathLength="1" d="M-20 134 C220 58 400 186 612 116 S1010 48 1220 126"/>
+    <path pathLength="1" d="M-20 102 C240 158 420 30 640 90 S1020 150 1220 80"/>
+  </svg>
+  <span class="wipe-title" id="wipeTitle"></span>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-labelledby="lbTitle" hidden data-lenis-prevent>
+  <div class="lb-backdrop" data-close></div>
+  <div class="lb-panel">
+    <button class="lb-close" id="lbClose" type="button" aria-label="Close project" data-close>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4 L16 16 M16 4 L4 16"/></svg>
+    </button>
+    <div>
+      <div class="lb-media">
+        <img id="lbImg" alt="">
+        <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Previous image"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4 L6.5 10 L12.5 16"/></svg></button>
+        <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next image"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4 L13.5 10 L7.5 16"/></svg></button>
+      </div>
+      <div class="lb-thumbs" id="lbThumbs"></div>
+    </div>
+    <div class="lb-text">
+      <h3 id="lbTitle"></h3>
+      <p class="lb-desc" id="lbDesc"></p>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/lenis.min.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  /* ================= Content: edit projects here ================= */
+  const PROJECTS = [
+    { id: "lunchbox", cat: "models", ar: 0.9184, title: "Character Lunch Box", meta: "3D printed lunch box",
+      desc: "Fantasia-themed lunch pail with lifted and colored elements to create a beautiful cover piece.",
+      imgs: ["assets/img/lunchbox-1.jpg", "assets/img/lunchbox-2.jpg", "assets/img/lunchbox-3.jpg", "assets/img/lunchbox-4.jpg"],
+      alt: ["Lavender lunch box with raised pink lilies and a fairy on the lid, carried by its handle", "Renderings of the lunch box in purple, blue, lavender, and peach", "Renderings of open lunch boxes in pastel colors, filled with snacks", "The printed lunch box open on the grass, with three compartments of snacks"] },
+    { id: "goggles", cat: "models", ar: 1.1944, title: "Bike Goggles", meta: "",
+      desc: "Rugged goggles made with a soft, comfortable backing, a sturdy frame, and polarized lenses for the ideal riding glasses.",
+      imgs: ["assets/img/goggles-1.jpg", "assets/img/goggles-2.jpg", "assets/img/goggles-3.jpg"],
+      alt: ["Renderings of the bike goggles in four color and material combinations, floating in a spiral", "Close-up rendering of the goggles from the front and back, showing the padded seal and adjustable strap", "Exploded rendering of the goggles showing the strap, padded seal, frame, and lenses"] },
+    { id: "caddy", cat: "models", ar: 1.7765, title: "Crustacean Caddy", meta: "Bathroom caddy",
+      desc: "A crab-shaped bathroom essential that holds all your shower needs. Perfect for dorms, under-cabinet storage, or taking on the go.",
+      imgs: ["assets/img/caddy-1.webp", "assets/img/caddy-2.jpg", "assets/img/caddy-3.jpg"],
+      alt: ["Animated rendering of the red crab-shaped caddy turning in place", "Rendering of the red crab caddy holding shampoo, lotion, a toothbrush, and a razor", "Renderings of the caddy in red and green, plus a stack of pink, brown, and yellow caddies"] },
+    { id: "blaster", cat: "models", ar: 1.5003, title: "Glue Gun Blaster", meta: "Product concept", hero: 1, heroPos: "45% 50%",
+      desc: "Elements of functionality and design come together to create a whimsical glue gun. Created to look like a classic 1950s ray gun, but with the interior workings of a hot glue dispenser.",
+      imgs: ["assets/img/blaster-1.jpg", "assets/img/blaster-2.jpg", "assets/img/blaster-3.jpg", "assets/img/blaster-4.jpg", "assets/img/blaster-5.jpg"],
+      alt: ["The silver and pink glue gun blaster lying on a purple striped poster, aimed at a chrome sphere", "The printed blaster held in a hand, with renderings of four colorways behind it", "Renderings of the blaster in blue, yellow, purple, pink, and orange", "Exploded rendering showing the shell halves, glue stick channel, trigger, wiring, and screws", "Technical drawing of the Hot Glue Blaster with dimensioned left, right, front, and top views"] },
+    { id: "buddy", cat: "models", ar: 1.0000, title: "Buddy Box", meta: "3D printed trinket box",
+      desc: "Originally made as a gift for my aunt, the box is small enough to fit in your purse and perfectly hold things like pills, jewelry, or tiny trinkets. 3D printed, lined with fabric, and measured to fit the latch and hinges I bought, it’s the perfect box to throw in your bag without losing all your tiny things at the bottom. Inside is a shell embellishment found in Laguna Beach. It’s called Buddy Box not only because it’s always handy by your side, but also because the top depicts our family cat, Buddy.",
+      imgs: ["assets/img/buddy-1.jpg", "assets/img/buddy-2.jpg", "assets/img/buddy-3.jpg"],
+      alt: ["Small orange box with a latch and a cartoon of Buddy the cat on the lid", "The Buddy Box open, with a seashell photo in the lid and red velvet inside", "Buddy Box mood board with Buddy the cat, seashells, a pill case, and rubber hose cartoon references"] },
+    { id: "tiki", cat: "models", ar: 0.6667, title: "Tiki Phone Holder", meta: "3D printed phone holder",
+      desc: "A Hawaiian-themed phone holder that clips onto your bike, bringing the tropical scene to your ride, with carved totem sides, leafy fronds on top, and waves splashed across the base.",
+      imgs: ["assets/img/tiki-1.jpg", "assets/img/tiki-2.jpg", "assets/img/tiki-3.jpg"],
+      alt: ["Tiki phone holder printed in red, orange, and teal, with leaf fronds on top and a wave-shaped base", "Renderings of three tiki phone holder variations, including the handlebar clamp on the back", "The tiki phone holder mounted on a bike handlebar, holding a phone"] },
+    { id: "wii", cat: "models", ar: 0.6667, title: "Wii Catch-All Tray", meta: "Catch-all tray and poster", pos: "50% 76%",
+      desc: "Based on the Wii fishing minigame my sister and I would play when we were younger, I created this to bring an element of fun to daily life. The dimensions are driven by the average size of the pile of jewelry we typically leave on the counter after a day out. The poster borrows elements from the game to give a feeling of nostalgia.",
+      imgs: ["assets/img/wii-1.jpg"],
+      alt: ["Poster for the Wii Fishing Catch-All Tray: a blue pond-shaped tray with a tree, grass, fishing rod, and fish pieces"] },
+    { id: "keyfob", cat: "models", ar: 0.6667, title: "TIE Fighter Keyfob", meta: "Product concept", pos: "50% 58%",
+      desc: "An everyday car fob, created for TIE fighters. An experimental project in designing a basic everyday item for an imaginary vehicle.",
+      imgs: ["assets/img/keyfob-1.jpg", "assets/img/keyfob-2.jpg"],
+      alt: ["Gray and red TIE fighter keyfob held in a hand, with a TIE fighter in the background", "Renderings of the keyfob in chrome, rose gold, gold, and blue metal finishes"] },
+
+    { id: "pens", cat: "sketches", title: "Pen Collections", meta: "Marker renderings, three sets of six",
+      desc: "Sets of six pens, each with its own unique style: the first a luau, the next midcentury, and the last inspired by the Tank Girl comic. Hypothetically, they could be sold as souvenirs in their respective locations, like a Hawaiian shop or tiki bar, an enthusiast shop, or a general textile store. Each collection captures a distinct aesthetic, turning everyday writing tools into small, collectible expressions of place or memory.",
+      imgs: ["assets/img/pens-1.jpg", "assets/img/pens-2.jpg", "assets/img/pens-3.jpg"],
+      alt: ["Marker rendering of six playful pen designs from the Luau Collection", "Marker rendering of six elegant pen designs from the Midcentury Collection", "Marker rendering of six rugged pen designs from the Tank Collection"] },
+    { id: "watches", cat: "sketches", title: "Watch Concepts", meta: "Concept sketches",
+      desc: "Eight pencil drawings exploring different watch bands, faces, and patterns, each created with a different aesthetic in mind.",
+      imgs: ["assets/img/watches-1.jpg", "assets/img/watches-2.jpg"],
+      alt: ["Pencil sketches of four watch concepts, including Back to the Future, Time Warp, and Fire Walk With Me", "Pencil sketches of four more watch concepts, including Koi Clock and Tiles of Time"] },
+    { id: "scallop", cat: "sketches", title: "Shipment Scallop", meta: "Concept sheet for DESN 132A",
+      desc: "A food delivery robot created to deliver meals around the Long Beach area, with exterior elements like sand dollar eyes, a shell lid, and the lighthouse beacon.",
+      imgs: ["assets/img/scallop-1.jpg"],
+      alt: ["Concept sheet for Shipment Scallop, a delivery robot shaped like a scallop shell, with orthographic views"] },
+    { id: "woodland", cat: "sketches", title: "Woodland Playground", meta: "Playground concept",
+      desc: "Designed for children to feel immersed in a whimsical scene. Roaming through the structure, you find details based in nature, like galloping deer rockers, a slide down a waterfall, and a real, gently flowing stream curving through the center of the park, adding a touch of life.",
+      imgs: ["assets/img/woodland-1.jpg", "assets/img/woodland-2.jpg", "assets/img/woodland-3.jpg"],
+      alt: ["Marker rendering of Woodland Park, with a tube slide, deer rockers, and a stream", "Woodland Park description page beside a sketch of the deer rockers", "Woodland Park site plan seen from above"] },
+    { id: "chrome", cat: "sketches", title: "Chrome Figures", meta: "Marker and pastel renderings",
+      desc: "The praying mantis figurine was part of our chrome creature assignment, drawn using markers and pastels to create the look of a shiny insect. The 1950s Shoebox Ford is a rendering of my neighbor’s car, using the same techniques to practice creating the form of a vehicle.",
+      imgs: ["assets/img/chrome-1.jpg", "assets/img/chrome-2.jpg"],
+      alt: ["Marker drawing of a chrome praying mantis, captioned “u want the scoop?”", "Marker and pastel rendering of a red 1950s Shoebox Ford"] },
+    { id: "bb8", cat: "sketches", title: "BB-8 Disassembled", meta: "Marker and pen drawing",
+      desc: "Marker and pen drawing on Canson paper conveying a deconstructed BB-8.",
+      imgs: ["assets/img/bb8-1.jpg"],
+      alt: ["Marker drawing of BB-8 pulled apart, with a small figure inside"] },
+    { id: "valentine", cat: "sketches", title: "My Bloody Valentine", meta: "Marker rendering",
+      desc: "Marker rendering of sweet guitar concepts, with bodies shaped like an axe, a pair of lips, and a heart.",
+      imgs: ["assets/img/valentine-1.jpg"],
+      alt: ["Marker rendering of three guitar concepts with bodies shaped like an axe, lips, and a heart, titled My Bloody Valentine"] }
+  ];
+  const FEATURED = PROJECTS.filter(function (p) { return p.cat === "models"; }).map(function (p) { return p.id; });
+
+  /* ================= Setup ================= */
+  const VIEWS = ["models", "sketches", "collages"];
+  const TITLES = { home: "Kendall", models: "3D models", sketches: "Sketches", collages: "Collages" };
+  const TARGETS = { work: "work-sec", about: "about-sec", contact: "contact-sec" };
+  const ACCENT = { lunchbox: "--pink", goggles: "--ochre", caddy: "--pink", blaster: "--sky", buddy: "--ochre", tiki: "--pink", wii: "--sky", keyfob: "--pink" };
+
+  const byId = {};
+  PROJECTS.forEach(function (p) { byId[p.id] = p; });
+  const $ = function (s, r) { return (r || document).querySelector(s); };
+  const $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  const root = document.documentElement;
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const G = window.gsap;
+  const ST = window.ScrollTrigger;
+  const hasG = !!(G && ST);
+  if (hasG) G.registerPlugin(ST);
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  /* ================= Smooth scroll ================= */
+  let lenis = null;
+  if (!reduce && typeof window.Lenis === "function") {
+    lenis = new window.Lenis({ duration: 1.15, easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }, smoothWheel: true });
+    if (hasG) {
+      lenis.on("scroll", ST.update);
+      G.ticker.add(function (time) { lenis.raf(time * 1000); });
+      G.ticker.lagSmoothing(0);
+    } else {
+      const raf = function (t) { lenis.raf(t); requestAnimationFrame(raf); };
+      requestAnimationFrame(raf);
+    }
+  }
+  function scrollToY(y, immediate) {
+    if (lenis) lenis.scrollTo(y, { immediate: !!immediate, force: true });
+    else window.scrollTo({ top: y, behavior: immediate || reduce ? "auto" : "smooth" });
+  }
+  function scrollToTarget(target, immediate) {
+    if (target === "top") { scrollToY(0, immediate); return; }
+    scrollToY(Math.max(0, target.getBoundingClientRect().top + window.scrollY - 70), immediate);
+  }
+
+  /* ================= Render: 3D models showroom ================= */
+  const exhibits = $("#exhibits");
+  const chips = $("#modelChips");
+  PROJECTS.filter(function (p) { return p.cat === "models"; }).forEach(function (p) {
+    const sec = document.createElement("section");
+    sec.className = "exhibit";
+    sec.id = "ex-" + p.id;
+    sec.style.setProperty("--accent", "var(" + (ACCENT[p.id] || "--ochre") + ")");
+    sec.setAttribute("aria-labelledby", "exh-" + p.id);
+    const count = p.imgs.length;
+    sec.innerHTML =
+      '<div class="exhibit-stage">' +
+        '<div class="plinth-glow" aria-hidden="true"></div>' +
+        '<div class="exhibit-art" style="--ar:' + (p.ar || 1) + '">' +
+          '<span class="exhibit-sketch" aria-hidden="true"></span><span class="exhibit-sketch" aria-hidden="true"></span>' +
+          (count > 1 ? '<span class="exhibit-back" aria-hidden="true"><img src="' + p.imgs[1] + '" alt="" loading="lazy" decoding="async" draggable="false"></span>' : '') +
+          '<button class="exhibit-frame" type="button" data-open="' + p.id + '" data-k="0" aria-label="' + esc("Open " + p.title + (count > 1 ? ", " + count + " images" : "")) + '">' +
+            '<span class="exhibit-photo"><img src="' + p.imgs[0] + '" alt="' + esc(p.alt[0]) + '" loading="lazy" decoding="async" draggable="false"></span>' +
+          '</button>' +
+        '</div>' +
+      '</div>' +
+      '<div class="exhibit-text">' +
+        '<h2 id="exh-' + p.id + '">' + esc(p.title) + '</h2>' +
+        (p.desc ? '<p class="exhibit-desc">' + esc(p.desc) + '</p>' : '') +
+      '</div>';
+    exhibits.appendChild(sec);
+    chips.insertAdjacentHTML("beforeend", '<button class="chip" type="button" data-scroll="ex-' + p.id + '">' + esc(p.title) + '</button>');
+  });
+
+  /* ================= Render: sketchbook desk ================= */
+  const desk = $("#desk");
+  const TILTS = [-1.6, 1.3, -0.7, 1.8, -1.2, 0.8, -1.9, 1.1];
+  const sheets = PROJECTS.filter(function (p) { return p.cat === "sketches"; }).map(function (p, i) {
+    const b = document.createElement("button");
+    b.className = "sheet";
+    b.type = "button";
+    b.setAttribute("data-open", p.id);
+    b.style.setProperty("--tilt", TILTS[i % TILTS.length] + "deg");
+    b.innerHTML =
+      '<span class="sheet-body">' +
+        (p.imgs.length > 1 ? '<span class="sheet-under" aria-hidden="true"></span>' : '') +
+        '<span class="sheet-paper"><span class="sheet-coil" aria-hidden="true"></span>' +
+          '<img src="' + p.imgs[0] + '" alt="' + esc(p.alt[0]) + '" loading="lazy" decoding="async" draggable="false">' +
+        '</span>' +
+      '</span>' +
+      '<span class="sheet-title">' + esc(p.title) + '</span>';
+    return b;
+  });
+  let deskCols = 0;
+  function layoutDesk() {
+    const w = window.innerWidth;
+    const n = w >= 1100 ? 3 : w >= 680 ? 2 : 1;
+    if (n === deskCols) return false;
+    deskCols = n;
+    desk.innerHTML = "";
+    const cols = [];
+    for (let k = 0; k < n; k++) {
+      const c = document.createElement("div");
+      c.className = "desk-col";
+      desk.appendChild(c);
+      cols.push(c);
+    }
+    sheets.forEach(function (el, i) { cols[i % n].appendChild(el); });
+    return true;
+  }
+  layoutDesk();
+
+  /* ================= Featured carousel ================= */
+  const feat = FEATURED.map(function (id) { return byId[id]; });
+  const frame = $("#featureFrame");
+  const stage = $("#featureStage");
+  const fTitle = $("#featureTitle");
+  const fImgs = feat.map(function (p, i) {
+    const im = new Image();
+    im.className = "feature-img";
+    const k = p.hero || 0;
+    im.src = p.imgs[k];
+    im.alt = p.alt[k];
+    im.style.objectPosition = (k ? p.heroPos : p.pos) || "50% 50%";
+    im.draggable = false;
+    im.decoding = "async";
+    im.style.clipPath = i === 0 ? "circle(150% at 50% 50%)" : "circle(0% at 50% 50%)";
+    im.style.zIndex = i === 0 ? "1" : "0";
+    if (i !== 0) im.setAttribute("aria-hidden", "true");
+    frame.appendChild(im);
+    return im;
+  });
+  fTitle.textContent = feat[0].title;
+
+  const dotsWrap = $("#featureDots");
+  dotsWrap.innerHTML = feat.map(function (p, i) {
+    return '<button class="feature-dot" type="button" aria-label="Show ' + esc(p.title) + '" aria-current="' + (i === 0) + '"></button>';
+  }).join("");
+  const dots = $$(".feature-dot", dotsWrap);
+  dots.forEach(function (d, i) { d.addEventListener("click", function () { go(0, i); }); });
+
+  let fi = 0;
+  let animating = false;
+  function setCaption(i, d) {
+    const p = feat[i];
+    if (hasG && !reduce) {
+      G.to([fTitle], {
+        x: -18 * d, opacity: 0, duration: 0.25, ease: "power2.in", stagger: 0.03, overwrite: true,
+        onComplete: function () {
+          fTitle.textContent = p.title;
+          G.fromTo([fTitle], { x: 18 * d, opacity: 0 }, { x: 0, opacity: 1, duration: 0.8, ease: "expo.out", stagger: 0.05 });
+        }
+      });
+    } else {
+      fTitle.textContent = p.title;
+    }
+  }
+  function go(dir, toIndex) {
+    if (animating) return;
+    const n = feat.length;
+    const next = typeof toIndex === "number" ? toIndex : (fi + dir + n) % n;
+    if (next === fi) return;
+    const d = typeof toIndex === "number" ? (next > fi ? 1 : -1) : dir;
+    const cur = fImgs[fi];
+    const nxt = fImgs[next];
+    fImgs.forEach(function (im) { im.style.zIndex = "0"; });
+    cur.style.zIndex = "1";
+    nxt.style.zIndex = "2";
+    cur.setAttribute("aria-hidden", "true");
+    nxt.removeAttribute("aria-hidden");
+    setCaption(next, d);
+    fi = next;
+    dots.forEach(function (dot, k) { dot.setAttribute("aria-current", String(k === fi)); });
+    if (hasG && !reduce) {
+      animating = true;
+      const side = d > 0 ? "100%" : "0%";
+      G.set(nxt, { clipPath: "circle(0% at " + side + " 50%)", scale: 1.18, xPercent: 0 });
+      G.timeline({ onComplete: function () { G.set(cur, { clipPath: "circle(0% at 50% 50%)", scale: 1, xPercent: 0 }); animating = false; } })
+        .to(nxt, { clipPath: "circle(150% at " + side + " 50%)", duration: 1.1, ease: "expo.inOut" }, 0)
+        .to(nxt, { scale: 1, duration: 1.5, ease: "expo.out" }, 0.1)
+        .to(cur, { scale: 0.9, xPercent: d > 0 ? -10 : 10, duration: 1.1, ease: "expo.inOut" }, 0);
+    } else {
+      cur.style.clipPath = "circle(0% at 50% 50%)";
+      nxt.style.clipPath = "circle(150% at 50% 50%)";
+    }
+  }
+  $(".feature-arrow.prev").addEventListener("click", function () { go(-1); });
+  $(".feature-arrow.next").addEventListener("click", function () { go(1); });
+  $("#featureOpen").addEventListener("click", function () { openLB(feat[fi].id, 0); });
+  $("#feature").addEventListener("keydown", function (e) {
+    if (e.key === "ArrowRight") { e.preventDefault(); go(1); }
+    if (e.key === "ArrowLeft") { e.preventDefault(); go(-1); }
+  });
+  let downX = null;
+  stage.addEventListener("pointerdown", function (e) { downX = e.clientX; });
+  stage.addEventListener("pointerup", function (e) {
+    if (downX === null) return;
+    const dx = e.clientX - downX;
+    downX = null;
+    if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
+    else openLB(feat[fi].id, 0);
+  });
+  stage.addEventListener("pointercancel", function () { downX = null; });
+
+  let paused = false;
+  let heroVisible = true;
+  let lbOpen = false;
+  if (!reduce) {
+    const feature = $("#feature");
+    feature.addEventListener("pointerenter", function () { paused = true; });
+    feature.addEventListener("pointerleave", function () { paused = false; });
+    feature.addEventListener("focusin", function () { paused = true; });
+    feature.addEventListener("focusout", function () { paused = false; });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (en) { heroVisible = en[0].isIntersecting; }, { threshold: 0.3 }).observe(stage);
+    }
+    setInterval(function () { if (!paused && heroVisible && !lbOpen && !document.hidden) go(1); }, 6000);
+  }
+  if (hasG && fine && !reduce) {
+    const rx = G.quickTo(frame, "rotationX", { duration: 0.7, ease: "power3" });
+    const ry = G.quickTo(frame, "rotationY", { duration: 0.7, ease: "power3" });
+    stage.addEventListener("pointermove", function (e) {
+      const r = stage.getBoundingClientRect();
+      ry(((e.clientX - r.left) / r.width - 0.5) * 14);
+      rx(-((e.clientY - r.top) / r.height - 0.5) * 14);
+    });
+    stage.addEventListener("pointerleave", function () { rx(0); ry(0); });
+    $$(".feature-arrow, .contact-email").forEach(function (btn) {
+      btn.addEventListener("pointermove", function (e) {
+        const r = btn.getBoundingClientRect();
+        G.to(btn, { x: (e.clientX - r.left - r.width / 2) * 0.35, y: (e.clientY - r.top - r.height / 2) * 0.35, duration: 0.4, ease: "power3.out" });
+      });
+      btn.addEventListener("pointerleave", function () { G.to(btn, { x: 0, y: 0, duration: 0.9, ease: "elastic.out(1, 0.4)" }); });
+    });
+  }
+
+  /* ================= Lightbox ================= */
+  const lb = $("#lb");
+  const lbImg = $("#lbImg");
+  const lbTitle = $("#lbTitle");
+  const lbDesc = $("#lbDesc");
+  const lbThumbs = $("#lbThumbs");
+  const lbPrev = $("#lbPrev");
+  const lbNext = $("#lbNext");
+  let lbP = null;
+  let lbI = 0;
+  let lastFocus = null;
+  let closeTimer = null;
+  const lbMedia = $(".lb-media");
+  function fitMedia() {
+    if (lbImg.naturalWidth && lbImg.naturalHeight) lbMedia.style.setProperty("--ar", (lbImg.naturalWidth / lbImg.naturalHeight).toFixed(4));
+  }
+  function lbShow(i, instant) {
+    const n = lbP.imgs.length;
+    lbI = (i + n) % n;
+    const apply = function () {
+      lbImg.onload = function () { fitMedia(); lbImg.style.opacity = "1"; };
+      lbImg.src = lbP.imgs[lbI];
+      lbImg.alt = lbP.alt[lbI] || lbP.title;
+      if (lbImg.complete && lbImg.naturalWidth) { fitMedia(); lbImg.style.opacity = "1"; }
+    };
+    if (instant) apply();
+    else { lbImg.style.opacity = "0"; setTimeout(apply, 180); }
+    $$(".lb-thumb", lbThumbs).forEach(function (t, k) { t.setAttribute("aria-current", String(k === lbI)); });
+  }
+  function openLB(id, k) {
+    const p = byId[id];
+    if (!p) return;
+    clearTimeout(closeTimer);
+    lbP = p;
+    lastFocus = document.activeElement;
+    lbTitle.textContent = p.title;
+    lbDesc.textContent = p.desc;
+    lbThumbs.innerHTML = p.imgs.length > 1 ? p.imgs.map(function (s, j) {
+      return '<button class="lb-thumb" type="button" data-k="' + j + '" aria-label="Show image ' + (j + 1) + ' of ' + p.imgs.length + '"><img src="' + s + '" alt=""></button>';
+    }).join("") : "";
+    lbPrev.hidden = lbNext.hidden = p.imgs.length < 2;
+    lbShow(k || 0, true);
+    lb.hidden = false;
+    void lb.offsetWidth;
+    lb.classList.add("is-open");
+    lbOpen = true;
+    root.classList.add("lb-open");
+    if (lenis) lenis.stop();
+    $("#lbClose").focus({ preventScroll: true });
+  }
+  function closeLB(quiet) {
+    if (!lbOpen) return;
+    lbOpen = false;
+    lb.classList.remove("is-open");
+    root.classList.remove("lb-open");
+    if (lenis) lenis.start();
+    if (quiet) { lb.hidden = true; return; }
+    closeTimer = setTimeout(function () { lb.hidden = true; }, 520);
+    if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+  }
+  lbPrev.addEventListener("click", function () { lbShow(lbI - 1); });
+  lbNext.addEventListener("click", function () { lbShow(lbI + 1); });
+  document.addEventListener("keydown", function (e) {
+    if (!lbOpen) return;
+    if (e.key === "Escape") { e.preventDefault(); closeLB(); }
+    else if (e.key === "ArrowRight" && lbP.imgs.length > 1) lbShow(lbI + 1);
+    else if (e.key === "ArrowLeft" && lbP.imgs.length > 1) lbShow(lbI - 1);
+    else if (e.key === "Tab") {
+      const f = $$("button", lb).filter(function (x) { return !x.hidden && x.offsetParent !== null; });
+      if (!f.length) return;
+      const first = f[0];
+      const last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+
+  /* ================= Colored-pencil waves ================= */
+  const colors = { ochre: [198, 141, 43], sky: [127, 164, 196] };
+  function rgba(c, a) { return "rgba(" + c[0] + "," + c[1] + "," + c[2] + "," + Math.max(0, Math.min(1, a)).toFixed(3) + ")"; }
+  function WaveField(canvas, cfg) {
+    this.c = canvas;
+    this.ctx = canvas.getContext("2d");
+    this.cfg = cfg;
+    this.t = Math.random() * 100;
+    this.reveal = cfg.reveal == null ? 1 : cfg.reveal;
+    this.mx = -1e4; this.my = -1e4; this.tx = -1e4; this.ty = -1e4;
+    this.hover = 0; this.hoverT = 0;
+    this.visible = true;
+    const self = this;
+    this.resize();
+    if ("ResizeObserver" in window) new ResizeObserver(function () { self.resize(); }).observe(canvas);
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (en) { self.visible = en[0].isIntersecting; }, { rootMargin: "120px" }).observe(canvas);
+  }
+  WaveField.prototype.resize = function () {
+    const r = this.c.getBoundingClientRect();
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    this.w = Math.max(1, r.width);
+    this.h = Math.max(1, r.height);
+    this.c.width = Math.round(this.w * dpr);
+    this.c.height = Math.round(this.h * dpr);
+    this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    this.draw();
+  };
+  WaveField.prototype.pointer = function (cx, cy) {
+    const r = this.c.getBoundingClientRect();
+    this.tx = cx - r.left;
+    this.ty = cy - r.top;
+    this.hoverT = (this.ty > -90 && this.ty < r.height + 90) ? 1 : 0;
+  };
+  WaveField.prototype.step = function (dt) {
+    this.t += dt * this.cfg.speed;
+    if (this.mx < -1e3) { this.mx = this.tx; this.my = this.ty; }
+    this.mx += (this.tx - this.mx) * 0.08;
+    this.my += (this.ty - this.my) * 0.08;
+    this.hover += (this.hoverT - this.hover) * 0.05;
+    this.draw();
+  };
+  WaveField.prototype.draw = function () {
+    const ctx = this.ctx, w = this.w, h = this.h, t = this.t, self = this;
+    ctx.clearRect(0, 0, w, h);
+    if (this.reveal <= 0.001 || w < 2) return;
+    const limit = w * this.reveal + 1;
+    const step = w < 700 ? 10 : 8;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    this.cfg.bands.forEach(function (b, bi) {
+      for (let i = 0; i < b.lines; i++) {
+        const k = b.lines > 1 ? i / (b.lines - 1) - 0.5 : 0;
+        ctx.beginPath();
+        let first = true;
+        for (let x = -12; x <= limit; x += step) {
+          const nx = x / w;
+          const spread = b.spread * (0.5 + 0.5 * Math.sin(nx * 2.4 + t * 0.6 + bi * 1.7));
+          let y = b.y * h + b.tilt * (nx - 0.5) * h +
+            Math.sin(nx * b.freq + t + b.phase) * b.amp +
+            Math.sin(nx * b.freq * 2.3 - t * 1.4 + i * 0.35) * b.amp * 0.18 +
+            k * spread;
+          if (self.hover > 0.01) {
+            const dx = x - self.mx, dy = y - self.my;
+            const f = Math.exp(-(dx * dx) / (2 * 150 * 150) - (dy * dy) / (2 * 95 * 95));
+            y += (dy >= 0 ? 1 : -1) * f * 30 * self.hover;
+          }
+          if (first) { ctx.moveTo(x, y); first = false; } else ctx.lineTo(x, y);
+        }
+        const a = b.alpha * (1 - Math.abs(k) * 0.85) + 0.07;
+        ctx.strokeStyle = b.color === "sky" ? rgba(colors.sky, a * 0.85) : rgba(colors.ochre, a);
+        ctx.lineWidth = b.width * (i % 3 === 1 ? 1.4 : 1);
+        ctx.stroke();
+      }
+    });
+  };
+  const fields = [];
+  fields.push(new WaveField($("#wavesHero"), {
+    speed: 0.00042,
+    bands: [
+      { y: 0.46, tilt: -0.16, lines: 10, spread: 78, amp: 58, freq: 3.4, phase: 0, alpha: 0.55, width: 1.1, color: "ochre" },
+      { y: 0.8, tilt: 0.1, lines: 8, spread: 56, amp: 40, freq: 2.9, phase: 2.1, alpha: 0.45, width: 1, color: "ochre" },
+      { y: 0.64, tilt: 0.02, lines: 2, spread: 22, amp: 54, freq: 2.4, phase: 4.2, alpha: 0.4, width: 1, color: "sky" }
+    ]
+  }));
+  const fieldA = new WaveField($("#wavesA"), {
+    speed: 0.00036, reveal: hasG && !reduce ? 0 : 1,
+    bands: [
+      { y: 0.5, tilt: -0.08, lines: 8, spread: 58, amp: 30, freq: 3.2, phase: 1, alpha: 0.5, width: 1, color: "ochre" },
+      { y: 0.52, tilt: 0.04, lines: 1, spread: 0, amp: 30, freq: 2.6, phase: 3, alpha: 0.35, width: 1, color: "sky" }
+    ]
+  });
+  fields.push(fieldA);
+  const pageWaves = function (phase) {
+    return {
+      speed: 0.0004,
+      bands: [
+        { y: 0.56, tilt: -0.14, lines: 9, spread: 64, amp: 44, freq: 3.1, phase: phase, alpha: 0.5, width: 1, color: "ochre" },
+        { y: 0.64, tilt: 0.05, lines: 1, spread: 0, amp: 46, freq: 2.3, phase: phase + 2.6, alpha: 0.35, width: 1, color: "sky" }
+      ]
+    };
+  };
+  fields.push(new WaveField($("#wavesModels"), pageWaves(0.6)));
+  fields.push(new WaveField($("#wavesSketches"), pageWaves(2.4)));
+  fields.push(new WaveField($("#wavesCollages"), pageWaves(4.1)));
+  if (!reduce) {
+    let lastT = performance.now();
+    const loop = function (now) {
+      const dt = Math.min(50, now - lastT);
+      lastT = now;
+      for (let i = 0; i < fields.length; i++) if (fields[i].visible) fields[i].step(dt);
+      requestAnimationFrame(loop);
+    };
+    requestAnimationFrame(loop);
+    window.addEventListener("pointermove", function (e) {
+      for (let i = 0; i < fields.length; i++) fields[i].pointer(e.clientX, e.clientY);
+    }, { passive: true });
+  }
+
+  /* ================= Scroll-linked motion, per page ================= */
+  const ANIMS = {
+    home: function () {
+      fieldA.reveal = 0;
+      fieldA.draw();
+      ST.create({
+        trigger: "#wavesA", start: "top 95%", end: "bottom 45%", scrub: 0.6,
+        onUpdate: function (s) { fieldA.reveal = s.progress; if (!fieldA.visible) fieldA.draw(); }
+      });
+      G.fromTo(".paths .ring path", { strokeDashoffset: 1 }, {
+        strokeDashoffset: 0, duration: 1.5, ease: "power2.inOut", stagger: 0.09,
+        scrollTrigger: { trigger: ".paths-list", start: "top 88%", once: true }
+      });
+      G.fromTo("#portraitImg", { yPercent: -7 }, {
+        yPercent: 7, ease: "none",
+        scrollTrigger: { trigger: ".portrait", start: "top bottom", end: "bottom top", scrub: 0.6 }
+      });
+    },
+    models: function () {
+      $$(".exhibit").forEach(function (ex) {
+        const tl = G.timeline({ scrollTrigger: { trigger: ex, start: "top 88%", end: "center 55%", scrub: 0.7 } });
+        tl.fromTo($(".exhibit-art", ex), { scale: 0.86, y: 40 }, { scale: 1, y: 0, ease: "none" }, 0)
+          .fromTo($(".exhibit-photo img", ex), { scale: 1.22 }, { scale: 1, ease: "none" }, 0)
+          .fromTo($(".plinth-glow", ex), { scale: 0.6, opacity: 0.2 }, { scale: 1, opacity: 1, ease: "none" }, 0);
+        G.fromTo($(".exhibit-text", ex), { y: 40 }, {
+          y: -20, ease: "none",
+          scrollTrigger: { trigger: ex, start: "top bottom", end: "bottom top", scrub: 0.7 }
+        });
+      });
+    },
+    collages: function () {},
+    sketches: function () {
+      const cols = $$(".desk-col");
+      const speeds = cols.length === 3 ? [-40, -130, -70] : cols.length === 2 ? [-30, -110] : [0];
+      cols.forEach(function (c, k) {
+        if (!speeds[k]) return;
+        G.fromTo(c, { y: 0 }, { y: speeds[k], ease: "none", scrollTrigger: { trigger: "#desk", start: "top bottom", end: "bottom top", scrub: 0.8 } });
+      });
+      ST.batch(".sheet", {
+        start: "top 94%", once: true,
+        onEnter: function (batch) { G.from(batch, { y: 80, duration: 1.2, ease: "expo.out", stagger: 0.08 }); }
+      });
+    }
+  };
+
+  /* ================= Collages: story player ================= */
+  const COLLAGES = [
+    { src: "assets/img/collage-01.jpg", alt: "Collage of a drive in a convertible, with red flowers, a small plane, and a view over the city" },
+    { src: "assets/img/collage-02.jpg", alt: "Collage from a Renaissance faire: Kendall in a beaded dress by a lake, a jousting knight, a queen, and a goose" },
+    { src: "assets/img/collage-03.jpg", alt: "Disneyland collage with friends at the castle and a soft-serve cone" },
+    { src: "assets/img/collage-04.jpg", alt: "Collage of an orange cat and a white kitten among houseplants and a record player" },
+    { src: "assets/img/collage-05.jpg", alt: "Collage from Venice, Italy: canals, red buildings, a cat, and a stack of CDs" },
+    { src: "assets/img/collage-06.jpg", alt: "Collage of a beach day with bubbles, an egret, two cats, calla lilies, and a cartwheel" },
+    { src: "assets/img/collage-07.jpg", alt: "Collage from Disneyland with butterflies, a giant flower seat, a parade, and lunch" },
+    { src: "assets/img/collage-08.jpg", alt: "Collage from an Interstella 5555 screening at the United Artists theatre" },
+    { src: "assets/img/collage-09.jpg", alt: "Collage of film-strip portraits on red booths with ornate lamps and gold details" },
+    { src: "assets/img/collage-10.jpg", alt: "Collage from a concert at the Fonda Theatre, with friends and a Walk of Fame star" },
+    { src: "assets/img/collage-11.jpg", alt: "Valentine’s Day collage with a photo booth strip, a red car, swans, and roses" },
+    { src: "assets/img/collage-12.jpg", alt: "Collage from Griffith Observatory: the Los Angeles skyline, friends with plush toys, the moon, and the Hollywood sign" }
+  ];
+  const STORY_MS = 3000;
+  const story = $("#story");
+  const storyImg = $("#storyImg");
+  const storyPause = $("#storyPause");
+  const storyLive = $("#storyLive");
+  $("#storyBars").innerHTML = COLLAGES.map(function () { return '<span class="story-bar"><i></i></span>'; }).join("");
+  const barFills = $$(".story-bar i");
+  let si = 0, sElapsed = 0, sLast = 0, sRunning = false, sPaused = reduce, sHeld = false, sRaf = 0;
+  function storyShow(i) {
+    const n = COLLAGES.length;
+    si = (i + n) % n;
+    storyImg.src = COLLAGES[si].src;
+    storyImg.alt = COLLAGES[si].alt;
+    storyLive.textContent = "Collage " + (si + 1) + " of " + n;
+    sElapsed = 0;
+    barFills.forEach(function (f, k) { f.style.transform = "scaleX(" + (k < si ? 1 : 0) + ")"; });
+    const ahead = new Image();
+    ahead.src = COLLAGES[(si + 1) % n].src;
+  }
+  function storyTick(now) {
+    if (!sRunning) return;
+    const dt = sLast ? Math.min(100, now - sLast) : 0;
+    sLast = now;
+    if (!sPaused && !sHeld && !document.hidden) {
+      sElapsed += dt;
+      if (sElapsed >= STORY_MS) storyShow(si + 1);
+      else barFills[si].style.transform = "scaleX(" + (sElapsed / STORY_MS).toFixed(4) + ")";
+    }
+    sRaf = requestAnimationFrame(storyTick);
+  }
+  function storyEnter() {
+    storyShow(si);
+    if (!sRunning) { sRunning = true; sLast = 0; sRaf = requestAnimationFrame(storyTick); }
+  }
+  function storyLeave() { sRunning = false; cancelAnimationFrame(sRaf); }
+  function storySetPaused(p) {
+    sPaused = p;
+    storyPause.classList.toggle("is-paused", p);
+    storyPause.setAttribute("aria-label", p ? "Play" : "Pause");
+  }
+  storySetPaused(sPaused);
+  storyPause.addEventListener("click", function () { storySetPaused(!sPaused); });
+  $("#storyPrev").addEventListener("click", function () { storyShow(si - 1); });
+  $("#storyNext").addEventListener("click", function () { storyShow(si + 1); });
+  // tap the left third to go back, anywhere else to go forward; press and hold to pause
+  let sDownAt = 0, sDownX = 0, sHoldTimer = 0;
+  story.addEventListener("pointerdown", function (e) {
+    if (e.target.closest(".story-pause")) return;
+    sDownAt = performance.now();
+    sDownX = e.clientX;
+    sHoldTimer = setTimeout(function () { sHeld = true; story.classList.add("is-held"); }, 220);
+  });
+  function storyRelease(cancel) {
+    if (!sDownAt) return;
+    clearTimeout(sHoldTimer);
+    const wasHeld = sHeld;
+    const quick = performance.now() - sDownAt < 220;
+    sHeld = false;
+    sDownAt = 0;
+    story.classList.remove("is-held");
+    if (cancel || wasHeld || !quick) return;
+    const r = story.getBoundingClientRect();
+    storyShow(sDownX - r.left < r.width * 0.3 ? si - 1 : si + 1);
+  }
+  story.addEventListener("pointerup", function () { storyRelease(false); });
+  story.addEventListener("pointercancel", function () { storyRelease(true); });
+  story.addEventListener("pointerleave", function () { storyRelease(true); });
+  story.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+  document.addEventListener("keydown", function (e) {
+    if (current !== "collages" || lbOpen) return;
+    if (e.key === "ArrowRight") { e.preventDefault(); storyShow(si + 1); }
+    else if (e.key === "ArrowLeft") { e.preventDefault(); storyShow(si - 1); }
+    else if (e.key === " " && !e.target.closest("button, a, input, textarea")) { e.preventDefault(); storySetPaused(!sPaused); }
+  });
+
+  /* ================= Pages and navigation ================= */
+  const nav = $("#nav");
+  const wipe = $("#wipe");
+  const wipeTitle = $("#wipeTitle");
+  const viewEls = $$("[data-view]");
+  let current = null;
+  let ctx = null;
+  let transitioning = false;
+
+  function buildAnims() {
+    if (ctx) { ctx.revert(); ctx = null; }
+    if (!hasG) return;
+    if (!reduce) ctx = G.context(function () { ANIMS[current](); });
+    ST.refresh();
+  }
+  function showView(view) {
+    if (ctx) { ctx.revert(); ctx = null; }
+    closeLB(true);
+    viewEls.forEach(function (v) { v.hidden = v.getAttribute("data-view") !== view; });
+    current = view;
+    if (view === "collages") storyEnter(); else storyLeave();
+    document.title = view === "home" ? "Kendall Calantropio | Industrial Design" : TITLES[view] + " | Kendall Calantropio";
+    nav.classList.remove("is-hidden");
+    scrollToY(0, true);
+    buildAnims();
+  }
+  function focusWork() {
+    const list = $(".paths-list");
+    list.classList.remove("is-focus");
+    void list.offsetWidth;
+    list.classList.add("is-focus");
+  }
+  function goWork(immediate) {
+    const el = document.getElementById("work-sec");
+    const r = el.getBoundingClientRect();
+    const y = Math.max(0, r.top + window.scrollY - Math.max(72, (window.innerHeight - r.height) / 2));
+    scrollToY(y, immediate);
+    setTimeout(focusWork, immediate ? 1000 : 950);
+  }
+  function arrive(id, immediate) {
+    if (!id || id === "top" || VIEWS.indexOf(id) >= 0) return;
+    if (id === "work") { goWork(immediate); return; }
+    const el = document.getElementById(TARGETS[id] || id);
+    if (el) scrollToTarget(el, immediate);
+  }
+  function route(id, animate) {
+    if (transitioning) return;
+    const view = VIEWS.indexOf(id) >= 0 ? id : "home";
+    if (view === current) {
+      if (view === "home" && id && id !== "top") arrive(id, false);
+      else scrollToTarget("top");
+      return;
+    }
+    if (!animate || !hasG || reduce) { showView(view); arrive(id, true); return; }
+    transitioning = true;
+    wipeTitle.textContent = TITLES[view];
+    const lines = $$(".wipe-lines path");
+    G.timeline({ onComplete: function () { transitioning = false; G.set(wipe, { visibility: "hidden" }); } })
+      .set(wipe, { visibility: "visible", yPercent: 100 })
+      .set(lines, { strokeDashoffset: 1 })
+      .set(wipeTitle, { opacity: 0, y: 14 })
+      .to(wipe, { yPercent: 0, duration: 0.65, ease: "expo.inOut" })
+      .to(lines, { strokeDashoffset: 0, duration: 0.8, ease: "power2.out", stagger: 0.07 }, 0.25)
+      .to(wipeTitle, { opacity: 1, y: 0, duration: 0.55, ease: "expo.out" }, 0.4)
+      .add(function () { showView(view); arrive(id, true); }, 0.95)
+      .to(wipe, { yPercent: -100, duration: 0.75, ease: "expo.inOut" }, 1.15);
+  }
+
+  document.addEventListener("click", function (e) {
+    const a = e.target.closest('a[href^="#"]');
+    if (a) {
+      const id = a.getAttribute("href").slice(1);
+      e.preventDefault();
+      if (location.hash === "#" + id) route(id, true);
+      else location.hash = id;
+      return;
+    }
+    const sc = e.target.closest("[data-scroll]");
+    if (sc) { const t = document.getElementById(sc.getAttribute("data-scroll")); if (t) scrollToTarget(t); return; }
+    const opener = e.target.closest("[data-open]");
+    if (opener) { openLB(opener.getAttribute("data-open"), parseInt(opener.getAttribute("data-k") || "0", 10)); return; }
+    if (e.target.closest("[data-close]")) { closeLB(); return; }
+    const th = e.target.closest(".lb-thumb");
+    if (th) lbShow(parseInt(th.getAttribute("data-k"), 10));
+  });
+  window.addEventListener("hashchange", function () { route(location.hash.slice(1), true); });
+
+  let resizeTimer = null;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () { if (layoutDesk() && current === "sketches") buildAnims(); }, 160);
+  });
+
+  /* nav hides on the way down, returns on the way up */
+  let lastY = 0;
+  function onScroll(y) {
+    nav.classList.toggle("is-scrolled", y > 30);
+    if (y > lastY + 6 && y > 240 && !nav.contains(document.activeElement)) nav.classList.add("is-hidden");
+    else if (y < lastY - 6) nav.classList.remove("is-hidden");
+    lastY = y;
+  }
+  if (lenis) lenis.on("scroll", function (e) { onScroll(e.scroll); });
+  else window.addEventListener("scroll", function () { onScroll(window.scrollY); }, { passive: true });
+  nav.addEventListener("focusin", function () { nav.classList.remove("is-hidden"); });
+
+  /* footer details */
+  const clock = $("#clock");
+  const fmt = new Intl.DateTimeFormat("en-US", { timeZone: "America/Los_Angeles", hour: "numeric", minute: "2-digit" });
+  const tick = function () { clock.textContent = "It’s " + fmt.format(new Date()) + " in Long Beach, CA"; };
+  tick();
+  setInterval(tick, 30000);
+  $("#year").textContent = String(new Date().getFullYear());
+
+  /* ================= First load ================= */
+  function intro() {
+    if (!hasG || reduce) { root.classList.remove("js-intro"); return; }
+    const tl = G.timeline({ defaults: { ease: "expo.out" } });
+    tl.fromTo(".hero-name-ink", { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 1.9, ease: "power2.inOut" }, 0.15)
+      .fromTo(".hero-role", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 1 }, 1.1)
+      .fromTo(".feature-stage", { opacity: 0, scale: 0.88 }, { opacity: 1, scale: 1, duration: 1.4 }, 0.9)
+      .fromTo(".feature-ring path", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 1.7, ease: "power2.inOut", stagger: 0.15 }, 1)
+      .fromTo(".feature-arrow", { opacity: 0, x: function (i) { return i ? 24 : -24; } }, { opacity: 1, x: 0, duration: 1 }, 1.4)
+      .fromTo(".feature-caption", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 1 }, 1.5)
+      .fromTo(".waves-hero", { opacity: 0 }, { opacity: 1, duration: 2.2, ease: "power1.out" }, 0.6)
+      .fromTo(".nav", { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 1, clearProps: "transform" }, 1.2);
+    root.classList.remove("js-intro");
+  }
+  const startId = location.hash.slice(1);
+  const startView = VIEWS.indexOf(startId) >= 0 ? startId : "home";
+  showView(startView);
+  if (startView !== "home") root.classList.remove("js-intro");
+  const fontsReady = document.fonts && document.fonts.ready
+    ? Promise.race([document.fonts.ready, new Promise(function (r) { setTimeout(r, 1200); })])
+    : Promise.resolve();
+  fontsReady.then(function () {
+    if (startView === "home") intro();
+    if (hasG) ST.refresh();
+    if (startView === "home") arrive(startId, true);
+  });
+})();
+</script>
+</body>
+</html>
